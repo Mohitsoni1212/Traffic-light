@@ -1,0 +1,85 @@
+
+body { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    margin: 0; 
+    background-color: #f0f0f0; 
+} 
+
+.traffic-signal { 
+    width: 100px; 
+    height: 300px; 
+    background-color: #333; 
+    border-radius: 10px; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+    align-items: center; 
+} 
+
+.light { 
+    width: 60px; 
+    height: 60px; 
+    border-radius: 50%; 
+    margin: 10px; 
+    transition: background-color 0.9s; 
+} 
+
+@keyframes blinkRed { 
+
+    0%, 
+    49% { 
+        background-color: red; 
+    } 
+
+    50%, 
+    100% { 
+        background-color: black; 
+    } 
+} 
+
+@keyframes blinkYellow { 
+
+    0%, 
+    49% { 
+        background-color: yellow; 
+    } 
+
+    50%, 
+    100% { 
+        background-color: black; 
+    } 
+} 
+
+@keyframes blinkGreen { 
+
+    0%, 
+    49% { 
+        background-color: green; 
+    } 
+
+    50%, 
+    100% { 
+        background-color: black; 
+    } 
+} 
+
+.red { 
+    background-color: red; 
+    animation: blinkRed 5s infinite;
+    
+} 
+
+
+.yellow { 
+    background-color: yellow; 
+    animation: blinkYellow 8s infinite; 
+    animation-delay: 3s; 
+} 
+.green { 
+    background-color: green; 
+    animation: blinkGreen 10s infinite; 
+    animation-delay: 10s; 
+} 
